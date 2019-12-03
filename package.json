@@ -1,7 +1,15 @@
 {
   "name": "react-star-ratings-component",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "(ISC OR GPL-3.0)",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "babel": {
+    "presets": [
+      "@babel/react"
+    ]
+  },
   "dependencies": {
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
@@ -11,6 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "publish:npm": "set NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/reactRating --out-dir dist --copy-files",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -29,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4"
   }
 }

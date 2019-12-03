@@ -8,18 +8,22 @@ class RatingContainer extends Component {
     this.state = {
       numberOfSelectedStar: props.numberOfSelectedStar - 1
     };
-    this.onSelectStar=this.onSelectStar.bind(this);
+    this.onSelectStar = this.onSelectStar.bind(this);
   }
 
   onSelectStar(val) {
-    const { disableOnSelect, onSelectStar } = this.props;
+    const {
+      disableOnSelect,
+      onSelectStar
+    } = this.props;
+
     if (!disableOnSelect) {
       this.setState({
         numberOfSelectedStar: val
       });
       onSelectStar(val + 1);
     }
-  };
+  }
 
   render() {
     const {
@@ -29,32 +33,33 @@ class RatingContainer extends Component {
       spaceBetweenStar,
       colorEmptyStar
     } = this.props;
-    const { numberOfSelectedStar } = this.state;
+    const {
+      numberOfSelectedStar
+    } = this.state;
     let starlist = [];
+
     for (let i = 0; i < numberOfStar; i++) {
-      starlist.push(
-        <span
-          className="star"
-          key={i}
-          style={{
-            fontSize: starSize,
-            color: i <= numberOfSelectedStar ? colorFilledStar : colorEmptyStar,
-            marginLeft: spaceBetweenStar,
-            overflow: "hidden"
-            // width: numberOfSelectedStar>i && numberOfSelectedStar<i+1? ' ': starSize
-          }}
-          onMouseDown={() => this.onSelectStar(i)}
-        >
-          ★
-        </span>
-      );
+      starlist.push(React.createElement("span", {
+        className: "star",
+        key: i,
+        style: {
+          fontSize: starSize,
+          color: i <= numberOfSelectedStar ? colorFilledStar : colorEmptyStar,
+          marginLeft: spaceBetweenStar,
+          overflow: "hidden" // width: numberOfSelectedStar>i && numberOfSelectedStar<i+1? ' ': starSize
+
+        },
+        onMouseDown: () => this.onSelectStar(i)
+      }, "\u2605"));
     }
-    return (
-      <div className="star-rating-container">
-        <div className="star-list">{starlist}</div>
-      </div>
-    );
+
+    return React.createElement("div", {
+      className: "star-rating-container"
+    }, React.createElement("div", {
+      className: "star-list"
+    }, starlist));
   }
+
 }
 
 RatingContainer.defaultProps = {
@@ -65,7 +70,6 @@ RatingContainer.defaultProps = {
   spaceBetweenStar: "10px",
   disableOnSelect: true
 };
-
 RatingContainer.propTypes = {
   numberOfStar: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   colorFilledStar: PropTypes.string,
@@ -75,5 +79,4 @@ RatingContainer.propTypes = {
   spaceBetweenStar: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   disableOnSelect: PropTypes.bool
 };
-
 export default RatingContainer;
