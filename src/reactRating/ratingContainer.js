@@ -12,16 +12,12 @@ class RatingContainer extends Component {
 
   onSelectStar = val => {
     const { disableOnSelect, onSelectStar } = this.props;
-    this.setState(
-      {
+    if (!disableOnSelect) {
+      this.setState({
         numberOfSelectedStar: val
-      },
-      () => {
-        if (!disableOnSelect) {
-          onSelectStar(val + 1);
-        }
-      }
-    );
+      });
+      onSelectStar(val + 1);
+    }
   };
 
   render() {
@@ -43,8 +39,8 @@ class RatingContainer extends Component {
             fontSize: starSize,
             color: i <= numberOfSelectedStar ? colorFilledStar : colorEmptyStar,
             marginLeft: spaceBetweenStar,
-            overflow: "hidden",
-            // width: numberOfSelectedStar>i && numberOfSelectedStar<i+1? ' ': starSize 
+            overflow: "hidden"
+            // width: numberOfSelectedStar>i && numberOfSelectedStar<i+1? ' ': starSize
           }}
           onMouseDown={() => this.onSelectStar(i)}
         >

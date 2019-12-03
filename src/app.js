@@ -1,5 +1,5 @@
 import React from "react";
-import RatingContainer from "./containers/ratingContainer";
+import RatingContainer from "./reactRating/ratingContainer";
 
 const Testing = () => {
   return (
