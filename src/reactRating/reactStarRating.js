@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./ratingContainer.scss";
+import "./reactStarRating.scss";
 
-class RatingContainer extends Component {
+class ReactStarRating extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,7 +57,7 @@ class RatingContainer extends Component {
   }
 }
 
-RatingContainer.defaultProps = {
+ReactStarRating.defaultProps = {
   numberOfStar: 5,
   colorFilledStar: "orange",
   colorEmptyStar: "#000",
@@ -66,7 +66,7 @@ RatingContainer.defaultProps = {
   disableOnSelect: true
 };
 
-RatingContainer.propTypes = {
+ReactStarRating.propTypes = {
   numberOfStar: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   colorFilledStar: PropTypes.string,
   colorEmptyStar: PropTypes.string,
@@ -76,4 +76,4 @@ RatingContainer.propTypes = {
   disableOnSelect: PropTypes.bool
 };
 
-export default RatingContainer;
+export default ReactStarRating;

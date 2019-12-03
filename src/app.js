@@ -1,9 +1,9 @@
 import React from "react";
-import RatingContainer from "./reactRating/ratingContainer";
+import ReactStarRating from "./reactRating/reactStarRating";
 
 const Testing = () => {
   return (
-    <RatingContainer
+    <ReactStarRating
       numberOfStar={10}
       numberOfSelectedStar={2.5}
       colorFilledStar={"red"}
