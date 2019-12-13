@@ -11,6 +11,10 @@ This requires [React.js and Prop-Types] to run.
 npm i react-star-ratings-component
 ```
 
+### Demo
+
+[Sandbox link to Play with](https://codesandbox.io/s/bitter-breeze-0mt5m)
+
 ### How to Use
 
 Install and import react-star-ratings-component and pass the props as per the below table
