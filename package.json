@@ -44,5 +44,21 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1"
-  }
+  },
+  "keywords": [
+    "react",
+    "ratings",
+    "rating",
+    "star ratings",
+    "star-ratings",
+    "react-reviews",
+    "react-ratings",
+    "react-rating",
+    "react ratings",
+    "react rating",
+    "react-star-rating",
+    "react-star-rating-component",
+    "react star component"
+
+]
 }

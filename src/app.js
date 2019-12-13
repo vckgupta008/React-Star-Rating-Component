@@ -6,8 +6,8 @@ const Testing = () => {
     <ReactStarRating
       numberOfStar={10}
       numberOfSelectedStar={2.5}
-      colorFilledStar={"red"}
-      colorEmptyStar={"black"}
+      colorFilledStar="red"
+      colorEmptyStar="black"
       starSize="20px"
       spaceBetweenStar="10px"
       disableOnSelect={false}
