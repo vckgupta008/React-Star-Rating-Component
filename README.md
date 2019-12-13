@@ -13,7 +13,7 @@ npm i react-star-ratings-component
 
 ### Demo
 
-[Sandbox link to Play with](https://codesandbox.io/s/bitter-breeze-0mt5m)
+[Sandbox link to Play with](https://codesandbox.io/s/react-star-rating-0mt5m)
 
 ### How to Use
 
