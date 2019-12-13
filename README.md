@@ -2,7 +2,7 @@
 
 React-Star-Rating-Component is a simple to use yet completely customizable component for using Rating/Reviews.
 
-  - Fully CSS customizable - Change number of star, change color, size and space between star ratings
+  - Fully CSS customizable - Change number of star, color, size and space between star ratings
 
 ### Installation
 
