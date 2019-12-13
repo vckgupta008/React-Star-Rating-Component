@@ -1,11 +1,15 @@
 {
   "name": "react-star-ratings-component",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": false,
   "license": "(ISC OR GPL-3.0)",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "babel": {
     "presets": [
-      "@babel/preset-react"
+      "react",
+      "env",
+      "stage-2"
     ]
   },
   "dependencies": {
@@ -16,8 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/reactRating -d dist --copy-files",
-    "build": "react-scripts build",
+    "build": "set NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/reactRating --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -37,7 +40,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/preset-react": "^7.7.4"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
   }
 }
