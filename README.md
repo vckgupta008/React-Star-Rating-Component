@@ -47,7 +47,7 @@ Details of the Props to be passed:
 |numberOfStar | Number | This determines the maximum number of Stars or Rating in the Component.
 |colorFilledStar | string |  Color of selected Stars or Rating.
 |colorEmptyStar | string |  Color of Stars or Rating.
-|starSize | string |  Determines the size of the Star or Rating.
+|starSize | string |  This determines the size of the Star or Rating.
 |colorEmptyStar | string |    This determines the space between the Star or Rating.
 |disableOnSelect | boolean |  Disable or enable the user action in the component.
 |onSelectStar | func |  Callback function which returns the position of nth star on click of the component 
