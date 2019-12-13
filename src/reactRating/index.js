@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./reactStarRating.css";
+import "./index.css";
 
 class ReactStarRating extends Component {
   constructor(props) {
